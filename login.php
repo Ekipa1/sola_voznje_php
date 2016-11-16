@@ -10,8 +10,6 @@ $query = "SELECT * FROM `uporabnik` WHERE email='$email' AND geslo='$geslo'";
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 $num_results = mysql_num_rows($result);
-
-$num_results = mysql_num_rows($result);
 if ( $num_results== 1) {
     $row = mysql_fetch_array($result);
     echo $row['email'] ."\n";
